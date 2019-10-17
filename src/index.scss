@@ -2,5 +2,50 @@
 
 body {
   color: #f9f8fd;
-  background-color: #3d3d3f;
+  background-image: radial-gradient(#3e5478, #3d3d3f);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .container-fluid {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
+.gameRow {
+  height: 100%;
+  .col-md-4 {
+    text-align: center;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+}
+
+.centerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .brewList {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }

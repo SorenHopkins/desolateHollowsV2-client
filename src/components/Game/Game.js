@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import CauldronSvg from './Cauldron'
+
 import apiUrl from '../../apiConfig'
 
 const Game = ({ user, match, alert }) => {
@@ -107,22 +109,27 @@ const Game = ({ user, match, alert }) => {
   ))
 
   return (
-    <div>
-      <h4>Inventory</h4>
-      <ul>
-        {inventoryList}
-      </ul>
-      <br/>
-      <h4>Ingredients</h4>
-      <ul>
-        {ingredientList}
-      </ul>
-      <br/>
-      <h4>Brew</h4>
-      <ul>
-        {brewList}
+    <div className="row gameRow">
+      <div className="col-md-4">
+        <h4>Inventory</h4>
+        <ul>
+          {inventoryList}
+        </ul>
+      </div>
+      <div className="col-md-4 centerColumn">
+        <h4>Brew</h4>
+        <CauldronSvg/>
+        <ul className="brewList">
+          {brewList}
+        </ul>
         {currentBrew.length === 3 ? <button onClick={brewPotion}>Brew Potion</button> : '' }
-      </ul>
+      </div>
+      <div className="col-md-4">
+        <h4>Ingredients</h4>
+        <ul>
+          {ingredientList}
+        </ul>
+      </div>
     </div>
   )
 }

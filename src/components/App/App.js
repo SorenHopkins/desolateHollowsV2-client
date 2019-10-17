@@ -43,22 +43,24 @@ class App extends Component {
             message={alert.message}
           />
         ))}
-        <main className="container">
-          <Route path='/sign-up' render={() => (
-            <SignUp alert={this.alert} setUser={this.setUser} />
-          )} />
-          <Route path='/sign-in' render={() => (
-            <SignIn alert={this.alert} setUser={this.setUser} />
-          )} />
-          <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-            <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
-            <ChangePassword alert={this.alert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/intro' render={() => (
-            <Intro alert={this.alert} user={user} />
-          )} />
+        <main className="container-fluid">
+          <div className="container">
+            <Route path='/sign-up' render={() => (
+              <SignUp alert={this.alert} setUser={this.setUser} />
+            )} />
+            <Route path='/sign-in' render={() => (
+              <SignIn alert={this.alert} setUser={this.setUser} />
+            )} />
+            <AuthenticatedRoute user={user} path='/sign-out' render={() => (
+              <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
+            )} />
+            <AuthenticatedRoute user={user} path='/change-password' render={() => (
+              <ChangePassword alert={this.alert} user={user} />
+            )} />
+            <AuthenticatedRoute user={user} exact path='/intro' render={() => (
+              <Intro alert={this.alert} user={user} />
+            )} />
+          </div>
           <AuthenticatedRoute user={user} exact path='/' render={() => (
             <Game alert={this.alert} user={user} />
           )} />
