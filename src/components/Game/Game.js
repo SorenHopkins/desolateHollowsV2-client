@@ -49,7 +49,15 @@ const Game = ({ user, match, alert }) => {
       .then((res) => {
         const inventoryResult = inventory.filter(inventory => inventory.name === res.data.recipe[0].name)
         if (inventoryResult.length === 0) {
-          setInventory(inventory.concat(res.data.recipe[0]))
+          if (res.data.recipe[0]) {
+            setInventory(inventory.concat(res.data.recipe[0]))
+          } else {
+            alert({
+              heading: 'Your brew failed!',
+              message: 'It came out dark and sludge-y. Too bad- try again!',
+              variant: 'danger'
+            })
+          }
         }
       })
       .then(setBrew([]))
