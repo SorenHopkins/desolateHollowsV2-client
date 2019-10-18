@@ -49,7 +49,7 @@ for the user. Aiming for ambiance & a calming puzzle experience.
 ### Front-end Repository
 * Did not create wireframes before beginning, which created problems!
 * Created the following wireframe partways through development:
-![Wireframe](https://imgur.com/LXFbeYU)
+[Imgur](https://i.imgur.com/LXFbeYU.png)
 
 ### User Stories:
 * As a user I would like to select ingredients to use
