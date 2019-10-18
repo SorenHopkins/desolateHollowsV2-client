@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-
+import desolateAudio from './desolateHollow.mp3'
 const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
@@ -27,6 +27,9 @@ const Header = ({ user }) => (
     <Navbar.Brand href="#">
       Desolate Hollows
     </Navbar.Brand>
+    <audio src={desolateAudio} loop="true" controls>
+      <p>If you are reading this, it is because your browser does not support the audio element.</p>
+    </audio>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
