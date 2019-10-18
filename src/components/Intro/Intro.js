@@ -29,7 +29,7 @@ const Intro = () => {
     </section>)
   } else if (intro.currentSection === 5) {
     return (<section key="5">
-      <p>It doesn’t budge. You pull again. Still, nothing. You remind the door that your are a very powerful <a href="#/intro" onClick={() => setIntro({ currentSection: 6 })}>witch</a>, and it ought to let you through. A moment. It opens.</p>
+      <p>It doesn’t budge. You pull again. Still, nothing. You remind the door that you are a very powerful <a href="#/intro" onClick={() => setIntro({ currentSection: 6 })}>witch</a>, and it ought to let you through. A moment. It opens.</p>
     </section>)
   } else if (intro.currentSection === 6) {
     return (<section key="6">

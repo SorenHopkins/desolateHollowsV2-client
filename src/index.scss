@@ -53,31 +53,35 @@ body {
 .hoverGlowWarm:hover,a:hover {
   color: #fdec6e;
   text-shadow:0px 0px 30px #fdec6e;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 .hoverGlowHot:hover {
   color: #ff726f;
   text-shadow:0px 0px 30px #ff726f;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+
+.hoverGlowHot {
+  transform: perspective(400px) rotateY(30deg);
 }
 
 .hoverGlowCold:hover {
   color: #ADD8E6;
   text-shadow:0px 0px 30px #ADD8E6;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
-.btn-success:active + svg {
-  transform: scale(1.5, 1.25);
-  transition-duration: 1.5s;
+.hoverGlowCold {
+  flex-wrap: wrap;
+  align-items: space-evenly center;
+  transform: perspective(400px) rotateY(-30deg);
+}
+
+.ingredientUl {
+  padding: 2vh;
+}
+
+.ingredientButton {
+  margin: 1px
 }

@@ -102,7 +102,7 @@ const Game = ({ user, match, alert }) => {
   const ingredientList = ingredients.map(ingredient => {
     if (ingredient.available) {
       return <li key={ingredient.id}>
-        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title={ingredient.description} onClick={ () => {
+        <button type="button" className="btn btn-secondary btn-sm ingredientButton" data-toggle="tooltip" data-placement="top" title={ingredient.description} onClick={ () => {
           if (currentBrew.length < 3) {
             setBrew(currentBrew.concat(ingredient))
           }
@@ -135,7 +135,7 @@ const Game = ({ user, match, alert }) => {
       </div>
       <div className="col-md-4 hoverGlowCold">
         <h4>Ingredients</h4>
-        <ul>
+        <ul className="row ingredientUl" >
           {ingredientList}
         </ul>
       </div>
