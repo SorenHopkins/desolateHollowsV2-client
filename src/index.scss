@@ -35,6 +35,7 @@ body {
   align-items: center;
   svg {
     position: absolute;
+    justify-content: center;
     top: 0;
     left: 0;
     bottom: 0;
@@ -42,12 +43,13 @@ body {
     z-index: -1;
   }
   .brewList {
+    margin-top: 5vh;
     flex-grow: 1;
-    display: flex;
+    display: inline-flex;
+    align-self: center;
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 .hoverGlowWarm:hover,a:hover {
@@ -62,9 +64,9 @@ body {
   transition: all 0.2s ease-in;
 }
 
-.hoverGlowHot {
-  transform: perspective(400px) rotateY(30deg);
-}
+// .hoverGlowHot {
+//   transform: perspective(400px) rotateY(30deg);
+// }
 
 .hoverGlowCold:hover {
   color: #ADD8E6;
@@ -75,7 +77,7 @@ body {
 .hoverGlowCold {
   flex-wrap: wrap;
   align-items: space-evenly center;
-  transform: perspective(400px) rotateY(-30deg);
+  // transform: perspective(400px) rotateY(-30deg);
 }
 
 .ingredientUl {
